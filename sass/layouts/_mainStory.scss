@@ -1,0 +1,80 @@
+@use "../abstracts/" as a;
+
+.main-story {
+  height: 65rem;
+  background-size: cover;
+  background-image: url("/assets/stories/desktop/moon-of-appalacia.jpg");
+  display: flex;
+  align-items: center;
+  z-index: -15;
+  position: relative;
+  // justify-content: center;
+  @include a.respond(tab-port) {
+    background-image: url("/assets/stories/tablet/moon-of-appalacia.jpg");
+  }
+
+  @include a.respond(phone) {
+    background-image: url("/assets/stories/mobile/moon-of-appalacia.jpg");
+    background-size: 317px;
+    &::after {
+      content: "";
+      background-color: a.$primary-black;
+      height: 49.5rem;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__textbox {
+    // width: 110rem;
+    width: 38.7rem;
+    height: 40.6rem;
+    margin-left: 12rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+
+    @include a.respond(tab-port) {
+      margin-left: 3.9rem;
+    }
+
+    @include a.respond(phone) {
+      position: absolute;
+      top: 200px;
+      left: 29px;
+      width: 318px;
+      margin-left: 0;
+    }
+  }
+
+  &__head {
+    margin-bottom: 2.4rem;
+    z-index: 1000;
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+    z-index: 1000;
+    @include a.respond(tab-port) {
+      width: 36rem;
+    }
+  }
+
+  &__date {
+    margin-bottom: 2.4rem;
+    z-index: 1000;
+  }
+
+  &__link {
+    margin-top: 2.4rem;
+    z-index: 1000;
+  }
+
+  &__subtext {
+    z-index: 1000;
+
+    @include a.respond(phone);
+  }
+}

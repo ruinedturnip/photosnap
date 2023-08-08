@@ -1,0 +1,336 @@
+@use "./../abstracts/" as a;
+
+.card {
+  height: 50rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-bottom: 6px solid transparent;
+  background-size: cover;
+  background-position: center;
+
+  @include a.respond(phone) {
+    height: 37.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-3rem);
+
+    border-bottom: 6px solid transparent;
+    border-image: linear-gradient(
+      0.25turn,
+      a.$accent-color-one,
+      a.$accent-color-two,
+      a.$accent-color-three
+    );
+    border-image-slice: 1;
+    width: 100%;
+  }
+  &--1 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/mountains.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/mountains.jpg");
+    }
+  }
+  &--2 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/cityscapes.jpg");
+
+    @include a.respond(tab-phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/cityscapes.jpg");
+    }
+  }
+  &--3 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/18-days-voyage.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/18-days-voyage.jpg");
+    }
+  }
+  &--4 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/architecturals.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/architecturals.jpg");
+    }
+  }
+  &--5 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/world-tour.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/world-tour.jpg");
+    }
+  }
+  &--6 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/unforeseen-corners.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/unforeseen-corners.jpg");
+    }
+  }
+  &--7 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/king-on-africa.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/king-on-africa.jpg");
+    }
+  }
+  &--8 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/trip-to-nowhere.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/trip-to-nowhere.jpg");
+    }
+  }
+  &--9 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/rage-of-the-sea.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/rage-of-the-sea.jpg");
+    }
+  }
+  &--10 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/running-free.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/running-free.jpg");
+    }
+  }
+  &--11 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/behind-the-waves.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/behind-the-waves.jpg");
+    }
+  }
+  &--12 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/calm-waters.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/calm-waters.jpg");
+    }
+  }
+  &--13 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/milky-way.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/milky-way.jpg");
+    }
+  }
+  &--14 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/dark-forest.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/dark-forest.jpg");
+    }
+  }
+  &--15 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/somwarpet.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/somwarpet.jpg");
+    }
+  }
+  &--16 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/assets/stories/desktop/land-of-dreams.jpg");
+
+    @include a.respond(phone) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url("/assets/stories/mobile/land-of-dreams.jpg");
+    }
+  }
+
+  &__textbox {
+    width: 28rem;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.25);
+    padding-bottom: 1.6rem;
+  }
+  &__content {
+    position: absolute;
+    bottom: 41px;
+    left: 41px;
+  }
+
+  &__link {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__date {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include a.respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include a.respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

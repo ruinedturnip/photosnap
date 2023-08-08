@@ -1,0 +1,245 @@
+@use "../abstracts/" as a;
+
+.heading--large {
+  font-size: a.$heading-large;
+  line-height: 4.8rem;
+  letter-spacing: 4.17px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  @include a.respond(phone) {
+    font-size: 3.2rem;
+    letter-spacing: 3.33px;
+    line-height: 4rem;
+  }
+}
+
+.heading--medium {
+  font-size: a.$heading-medium;
+}
+.heading--medium {
+  font-size: a.$heading-medium;
+}
+.heading--small {
+  font-size: a.$heading-small;
+  font-weight: 500;
+}
+.heading--smallest {
+  font-size: a.$heading-smallest;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.body--regular {
+  font-size: a.$body-regular;
+  line-height: 2.5rem;
+}
+.body--small {
+  font-size: a.$body-small;
+}
+
+// components
+
+.referral__link {
+  &--dark {
+    color: a.$primary-white;
+  }
+
+  &--light {
+    color: a.$primary-black;
+  }
+
+  @include a.respond(phone) {
+    font-weight: 400;
+  }
+}
+
+// navbar
+
+.navbar {
+  &__link {
+    &-item {
+      color: a.$primary-black;
+      transition: all 0.3s;
+
+      &:hover {
+        color: a.$primary-light-grey;
+      }
+    }
+  }
+
+  &__btn {
+    color: a.$primary-white;
+    text-decoration: none;
+
+    &:hover {
+      color: a.$primary-black;
+    }
+  }
+}
+
+// Hero
+
+.hero {
+  &__heading {
+    color: a.$primary-white;
+  }
+
+  &__text {
+    color: rgb(255, 255, 255, 0.6);
+  }
+}
+
+.card {
+  &__title {
+    line-height: 2.5rem;
+    color: a.$primary-white;
+  }
+  &__author {
+    font-size: 1.3rem;
+    color: a.$primary-white;
+    line-height: auto;
+  }
+
+  &__link {
+    color: a.$primary-white;
+  }
+
+  &__date {
+    color: a.$primary-white;
+  }
+}
+
+// Footer
+.footer {
+  color: a.$primary-white;
+
+  &__link {
+    color: a.$primary-white;
+    transition: all 0.3s;
+    &:hover {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__body {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+// Stories Page
+
+.main-story {
+  &__head {
+    color: a.$primary-white;
+  }
+
+  &__title {
+    color: a.$primary-white;
+
+    font-weight: 500;
+  }
+
+  &__date {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+    span {
+      color: a.$primary-white;
+      margin-left: 9px;
+    }
+  }
+
+  &__subtext {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+// Features Page
+.feature-hero {
+  &__heading {
+    color: a.$primary-white;
+  }
+
+  &__text {
+    color: rgb(255, 255, 255, 0.6);
+  }
+}
+
+.cta {
+  &__heading {
+    color: a.$primary-white;
+  }
+}
+
+// Pricing page
+
+.plans {
+  &__toggle {
+    &__month {
+      color: a.$primary-black;
+    }
+
+    &__year {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__plan {
+    &--2 {
+      h2,
+      h3 {
+        color: a.$primary-white;
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
+  &__button {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &--dark {
+      color: a.$primary-white;
+
+      &:hover {
+        color: a.$primary-black;
+      }
+    }
+  }
+}
+
+.compare {
+  &__plans {
+    &__check {
+      span {
+        color: rgba(0, 0, 0, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1.67px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  &__link {
+    color: a.$primary-black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+  }
+
+  &__btn {
+    color: a.$primary-white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  }
+}

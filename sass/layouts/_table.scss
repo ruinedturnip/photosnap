@@ -1,0 +1,112 @@
+@use "../abstracts/" as a;
+
+.compare {
+  margin: 16rem auto;
+  &__heading {
+    text-align: center;
+    margin-bottom: 5.6rem;
+  }
+
+  &__table {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 73.1rem;
+
+    @include a.respond(phone) {
+      width: 31.8rem;
+    }
+
+    &-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid a.$primary-black;
+      padding-bottom: 2.3rem;
+    }
+  }
+
+  &__plans-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    gap: 9.2rem;
+
+    &:last-child {
+      margin-right: 3.5rem;
+    }
+
+    &:nth-child(2) {
+      margin-left: 1.4rem;
+    }
+
+    @include a.respond(phone) {
+      display: none;
+    }
+  }
+
+  &__table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2.4rem 0;
+    border-bottom: 1px solid a.$primary-light-grey;
+
+    @include a.respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 12.4rem;
+
+      &:last-child {
+        margin-right: 6.1rem;
+      }
+
+      &:first-child {
+        padding-left: 1.4rem;
+      }
+
+      @include a.respond(phone) {
+        align-items: flex-start;
+        gap: 8rem;
+      }
+    }
+  }
+
+  &__plans__check {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+
+    @include a.respond(phone) {
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    span {
+      display: none;
+
+      @include a.respond(phone) {
+        display: contents;
+      }
+    }
+  }
+
+  &__plans__img {
+    width: 16px;
+    height: 12px;
+  }
+
+  &__text {
+    margin-bottom: 1.7rem;
+  }
+}

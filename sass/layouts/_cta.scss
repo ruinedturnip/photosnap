@@ -1,0 +1,43 @@
+@use "../abstracts/" as a;
+
+.cta {
+  background-image: url("/assets/shared/desktop/bg-beta.jpg");
+
+  @include a.respond(tab-port) {
+    background-image: url("/assets/shared/tablet/bg-beta.jpg");
+  }
+
+  @include a.respond(phone) {
+    background-image: url("/assets/shared/mobile/bg-beta.jpg");
+  }
+
+  background-size: cover;
+  width: 100%;
+  height: 28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    width: 110rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include a.respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 31rem;
+    }
+  }
+
+  &__heading {
+    width: 40rem;
+
+    @include a.respond(phone) {
+      width: 31rem;
+
+      margin-bottom: 2.4rem;
+    }
+  }
+}

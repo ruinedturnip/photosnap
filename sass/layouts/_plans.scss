@@ -1,0 +1,196 @@
+@use "../abstracts/" as a;
+
+.plans {
+  width: 110rem;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 12rem;
+  flex-direction: column;
+  align-items: center;
+
+  @include a.respond(tab-land) {
+    width: 68.9rem;
+  }
+
+  @include a.respond(phone) {
+    width: 31.8rem;
+  }
+
+  &__toggle {
+    &-div {
+      display: flex;
+      gap: 3.2rem;
+      align-items: center;
+    }
+  }
+
+  &__container {
+    width: 110rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4.8rem;
+
+    @include a.respond(tab-land) {
+      flex-direction: column;
+      width: 68.9rem;
+    }
+
+    @include a.respond(phone) {
+      width: 31.8rem;
+    }
+  }
+
+  &__plan {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include a.respond(tab-land) {
+      width: 68.9rem;
+    }
+
+    @include a.respond(phone) {
+      width: 31.8rem;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1.8rem;
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+    width: 27rem;
+  }
+
+  &__date {
+    margin-bottom: 4rem;
+  }
+
+  &__plan--1,
+  &__plan--3 {
+    height: 40.7rem;
+    background-color: #f5f5f5;
+  }
+
+  &__plan--2 {
+    height: 47rem;
+    background-color: a.$primary-black;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 6px;
+      width: 100%;
+      background-image: linear-gradient(
+        0.6deg,
+        #ffc593 0%,
+        #bc7198 43.29%,
+        #5a77ff 83.33%
+      );
+    }
+  }
+
+  &__button {
+    width: 27rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: a.$primary-light-grey;
+    }
+
+    &--light {
+      background-color: a.$primary-white;
+    }
+
+    &--dark {
+      background-color: a.$primary-black;
+    }
+
+    @include a.respond(phone) {
+      width: 24.5rem;
+    }
+  }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: a.$primary-light-grey;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: a.$primary-black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: a.$primary-black;
+}
+input:checked + .slider:before {
+  background-color: a.$primary-white;
+}
+
+input:checked + .slider:before {
+  background-color: a.$primary-white;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(32px);
+  -ms-transform: translateX(32px);
+  transform: translateX(32px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 16px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

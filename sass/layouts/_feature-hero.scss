@@ -1,0 +1,99 @@
+@use "../abstracts/" as a;
+
+.feature-hero {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  z-index: -1;
+
+  @include a.respond(phone) {
+    flex-direction: column-reverse;
+  }
+
+  &__content {
+    width: 100%;
+    height: 49rem;
+    background-color: a.$primary-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -10;
+
+    @include a.respond(phone) {
+      height: 30rem;
+    }
+
+    // &::before {
+    //   content: "";
+    //   width: 6px;
+    //   height: 144px;
+    //   // color: linear-gradient(
+    //   //   to-right,
+    //   //   a.$accent-color-one,
+    //   //   a.$accent-color-two,
+    //   //   a.$accent-color-three
+    //   // );
+    //   color: red;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 0;
+    //   z-index: 500;
+    // }
+  }
+
+  &__textbox {
+    width: 38.7rem;
+    display: flex;
+    flex-direction: column;
+    @include a.respond(phone) {
+      margin-left: 29px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2.1rem;
+  }
+
+  &__text {
+    margin-bottom: 4.8rem;
+  }
+
+  &__imagebox {
+    height: 49rem;
+
+    @include a.respond(phone) {
+      height: 29.4rem;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__div {
+    position: absolute;
+    width: 6px;
+    height: 144px;
+    top: 30%;
+    left: 0;
+    z-index: 500;
+    background-color: white;
+    background-image: linear-gradient(
+      to top,
+      a.$accent-color-one,
+      a.$accent-color-two,
+      a.$accent-color-three
+    );
+
+    @include a.respond(phone) {
+      width: 144px;
+      height: 6px;
+      top: 50%;
+      left: 29px;
+    }
+  }
+}

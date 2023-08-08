@@ -1,0 +1,70 @@
+@use "../abstracts/" as a;
+.featured {
+  display: flex;
+
+  @include a.respond(phone) {
+    flex-direction: column;
+  }
+
+  &__content {
+    width: 100%;
+    height: 60rem;
+    background-color: a.$primary-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include a.respond(phone) {
+      height: 41.9rem;
+    }
+  }
+
+  &__textbox {
+    width: 38.7rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    margin-bottom: 2.1rem;
+    width: 35rem;
+
+    @include a.respond(tab-port) {
+      width: 32rem;
+    }
+
+    @include a.respond(phone) {
+      width: 26rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 4.8rem;
+
+    @include a.respond(phone) {
+      margin-bottom: 2.3rem;
+    }
+  }
+
+  &__imagebox {
+    height: 60rem;
+
+    @include a.respond(phone) {
+      height: 27.1rem;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &--left {
+    flex-direction: row-reverse;
+
+    @include a.respond(phone) {
+      flex-direction: column;
+    }
+  }
+}

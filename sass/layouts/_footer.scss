@@ -1,0 +1,106 @@
+@use "../abstracts/" as a;
+
+.footer {
+  background-color: a.$primary-black;
+  height: 25rem;
+
+  @include a.respond(phone) {
+    height: 53.9rem;
+  }
+
+  &__container {
+    width: 110rem;
+    margin: 0 auto;
+    padding-top: 6.4rem;
+    display: flex;
+    justify-content: space-between;
+    height: 12.2rem;
+
+    @include a.respond(tab-land) {
+      width: 80rem;
+    }
+    @include a.respond(tab-port) {
+      width: 60rem;
+    }
+
+    @include a.respond(phone) {
+      flex-direction: column;
+      width: 31rem;
+      height: 42.7rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__column--1 {
+    display: flex;
+    flex-direction: column;
+    height: 12.2rem;
+    justify-content: space-between;
+    position: relative;
+    svg {
+      fill: a.$primary-white;
+    }
+
+    @include a.respond(phone) {
+      align-items: center;
+      height: 8rem;
+    }
+  }
+
+  &__links {
+    position: absolute;
+    top: 0;
+    right: -20rem;
+    list-style: none;
+    height: 12.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include a.respond(phone) {
+      top: 130%;
+      left: 50%;
+
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    gap: 1.3rem;
+
+    list-style: none;
+  }
+
+  &__social-icon {
+    cursor: pointer;
+  }
+
+  &__social-svg {
+    // filter: brightness(0) saturate(100%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+      hue-rotate(63deg) brightness(102%) contrast(101%);
+    color: a.$primary-white;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  &__column--2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 12.2rem;
+
+    @include a.respond(phone) {
+      align-items: center;
+      height: 8rem;
+    }
+  }
+}

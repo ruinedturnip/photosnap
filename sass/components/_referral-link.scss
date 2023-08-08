@@ -1,0 +1,32 @@
+@use "../abstracts/" as a;
+
+.referral__link {
+  display: inline-flex;
+  &--dark {
+    display: block;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      border-bottom: 1px solid a.$primary-white;
+    }
+
+    span {
+      margin-left: 1.8rem;
+    }
+  }
+
+  &--light {
+    display: block;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      border-bottom: 1px solid a.$primary-black;
+    }
+
+    span {
+      margin-left: 1.8rem;
+    }
+  }
+}

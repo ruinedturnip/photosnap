@@ -1,0 +1,22 @@
+@use "./../abstracts/" as a;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+
+  @include a.respond(phone) {
+    display: none;
+  }
+}
+
+.navbar__btn {
+  width: 15.8rem;
+  height: 4rem;
+  background-color: a.$primary-black;
+
+  &:hover {
+    background-color: a.$primary-light-grey;
+  }
+}
