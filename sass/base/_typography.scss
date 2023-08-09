@@ -7,6 +7,10 @@
   text-transform: uppercase;
   font-weight: 500;
 
+  @include a.respond(tab-port) {
+    font-size: 4rem;
+  }
+
   @include a.respond(phone) {
     font-size: 3.2rem;
     letter-spacing: 3.33px;

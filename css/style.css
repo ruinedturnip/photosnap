@@ -40,6 +40,11 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
+@media only screen and (max-width: 56.25em) {
+  .heading--large {
+    font-size: 4rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .heading--large {
     font-size: 3.2rem;
@@ -302,19 +307,21 @@ body {
     margin-bottom: 2.3rem;
   }
 }
-.hero__imagebox {
+.hero__image {
+  width: 83rem;
+  object-fit: cover;
   height: 65rem;
 }
+@media only screen and (max-width: 75em) {
+  .hero__image {
+    width: 27.3rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
-  .hero__imagebox {
+  .hero__image {
     height: 29.4rem;
     width: 100%;
   }
-}
-.hero__image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 .hero__div {
   position: absolute;
@@ -383,19 +390,21 @@ body {
     margin-bottom: 2.3rem;
   }
 }
-.featured__imagebox {
+.featured__image {
   height: 60rem;
+  width: 83rem;
+  object-fit: cover;
+}
+@media only screen and (max-width: 75em) {
+  .featured__image {
+    width: 27.3rem;
+  }
 }
 @media only screen and (max-width: 37.5em) {
-  .featured__imagebox {
+  .featured__image {
     height: 27.1rem;
     width: 100%;
   }
-}
-.featured__image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 .featured--left {
   flex-direction: row-reverse;
@@ -668,19 +677,22 @@ body {
 .feature-hero__text {
   margin-bottom: 4.8rem;
 }
-.feature-hero__imagebox {
+.feature-hero__image {
+  height: 49rem;
+  width: 83rem;
+  object-fit: cover;
   height: 49rem;
 }
+@media only screen and (max-width: 75em) {
+  .feature-hero__image {
+    width: 27.3rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
-  .feature-hero__imagebox {
+  .feature-hero__image {
     height: 29.4rem;
     width: 100%;
   }
-}
-.feature-hero__image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 .feature-hero__div {
   position: absolute;

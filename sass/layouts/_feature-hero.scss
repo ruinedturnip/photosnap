@@ -59,19 +59,29 @@
     margin-bottom: 4.8rem;
   }
 
-  &__imagebox {
+  // &__imagebox {
+  //   height: 49rem;
+
+  //   @include a.respond(phone) {
+  //     height: 29.4rem;
+  //     width: 100%;
+  //   }
+  // }
+
+  &__image {
+    height: 49rem;
+    width: 83rem;
+    object-fit: cover;
+
     height: 49rem;
 
+    @include a.respond(tab-land) {
+      width: 27.3rem;
+    }
     @include a.respond(phone) {
       height: 29.4rem;
       width: 100%;
     }
-  }
-
-  &__image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
   }
 
   &__div {

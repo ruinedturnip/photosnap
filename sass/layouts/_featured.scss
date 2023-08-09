@@ -46,19 +46,19 @@
     }
   }
 
-  &__imagebox {
+  &__image {
     height: 60rem;
+    width: 83rem;
+    object-fit: cover;
+
+    @include a.respond(tab-land) {
+      width: 27.3rem;
+    }
 
     @include a.respond(phone) {
       height: 27.1rem;
       width: 100%;
     }
-  }
-
-  &__image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
   }
   &--left {
     flex-direction: row-reverse;
